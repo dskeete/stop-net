@@ -1,0 +1,3 @@
+[submodule "stop-net.features"]
+	path = features
+	url = ../stop-net.features.git
