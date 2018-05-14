@@ -1,3 +1,3 @@
 [submodule "stop.features"]
 	path = stop.features
-	url = ../stop.features.git
+	url = https://github.com/dskeete/stop.features.git
