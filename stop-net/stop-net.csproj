@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\stop-net.Utilities\stop-net.utilities.csproj" />
+    <ProjectReference Include="..\stop-net.utilities\stop-net.utilities.csproj" />
   </ItemGroup>
 
 </Project>
