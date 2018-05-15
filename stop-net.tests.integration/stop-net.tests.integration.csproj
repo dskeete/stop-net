@@ -28,16 +28,16 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <SubType>Code</SubType>
     </None>
-    <Compile Include="..\stop.features\feature-files\Output.feature.cs" Link="Output.feature.cs">
+    <Compile Include="..\stop.features\feature-files\Output.feature.cs" Link="Output.feature.cs" Condition="Exists('../../.nuget/packages/specflow/2.1.0/tools/TechTalk.SpecFlow.tasks')">
       <DependentUpon>Output.feature</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
 
   <Target Name="PrecompileScript" BeforeTargets="BeforeBuild">
-    <Exec Command="echo '*** START COPY FEATURE.CS ***'" />
-    <Exec Command="cp ../stop.features/feature-files/*.* ." />
-    <Exec Command="echo '*** FINSIH COPY FEATURE.CS ***'" />
+    <Exec Command="echo '*** START COPY FEATURES ***'" />
+    <Exec Command="cp ../stop.features/feature-files/Output.feature ." />
+    <Exec Command="echo '*** FINSIH COPY FEATURES ***'" />
     <Exec Command="echo '*** START EXECUTING PRECOMPILE ***'" />
     <Exec Command="dotnet SpecFlow.NetCore" />
     <Exec Command="echo '*** FINSIH EXECUTING PRECOMPILE ***'" />
@@ -51,6 +51,4 @@
     <ProjectReference Include="..\stop-net.utilities\stop-net.utilities.csproj" />
     <ProjectReference Include="..\stop-net\stop-net.csproj" />
   </ItemGroup>
-  <!-- <Import Project="../../.nuget/packages/specflow/2.1.0/tools/TechTalk.SpecFlow.tasks"  Condition="Exists('../../.nuget/packages/specflow/2.1.0/tools/TechTalk.SpecFlow.tasks')" />
-  <Import Project="../../.nuget/packages/specflow/2.1.0/tools/TechTalk.SpecFlow.targets" Condition="Exists('../../.nuget/packages/specflow/2.1.0/tools/TechTalk.SpecFlow.targets')" /> -->
 </Project>
