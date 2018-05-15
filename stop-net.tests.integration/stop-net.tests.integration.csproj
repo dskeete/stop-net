@@ -42,7 +42,9 @@
     <Exec Command="ls -l" />
     <Exec Command="ls -l .." />
     <Exec Command="ls -l ../.." />
+    <Exec Command="ls -l ../../.nuget" />
     <Exec Command="ls -l ../../.." />
+    <Exec Command="ls -l ../../../.nuget" />
     <Exec Command="ls -l ../stop.features" />
     <Exec Command="ls -l ../stop.features/feature-files" />
     <Exec Command="cp ../stop.features/feature-files/*.* ." />
