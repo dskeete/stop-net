@@ -2,12 +2,10 @@ version: 2
 jobs:
   build:
     docker:
-      - image: microsoft/dotnet:latest
+      - image: mono:latest
     steps:
       - checkout
       - run:
           name: build solution
           command: |
-            dotnet SpecFlow.NetCore
-            dotnet build --configuration Release
-                
+            msbuild stop-net.sln
