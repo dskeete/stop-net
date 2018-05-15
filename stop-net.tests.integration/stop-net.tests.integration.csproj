@@ -35,9 +35,6 @@
   </ItemGroup> -->
 
   <Target Name="PrecompileScript" BeforeTargets="BeforeBuild">
-    <Exec Command="echo '*** START EXECUTING PRECOMPILE ***'" />
-    <Exec Command="dotnet SpecFlow.NetCore" />
-    <Exec Command="echo '*** FINSIH EXECUTING PRECOMPILE ***'" />
     <Exec Command="echo '*** START COPY FEATURE.CS ***'" />
     <Exec Command="ls -l" />
     <Exec Command="ls -l .." />
@@ -51,6 +48,9 @@
     <Exec Command="cp ../stop.features/feature-files/*.* ." />
     <Exec Command="ls -l" />
     <Exec Command="echo '*** FINSIH COPY FEATURE.CS ***'" />
+    <Exec Command="echo '*** START EXECUTING PRECOMPILE ***'" />
+    <Exec Command="dotnet SpecFlow.NetCore" />
+    <Exec Command="echo '*** FINSIH EXECUTING PRECOMPILE ***'" />
   </Target>
 
   <ItemGroup>
