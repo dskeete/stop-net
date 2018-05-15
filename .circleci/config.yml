@@ -11,4 +11,4 @@ jobs:
           name: build solution
           command: |
             dotnet build --configuration Release
-            dotnet test
+            dotnet test stop-net.tests.integration
