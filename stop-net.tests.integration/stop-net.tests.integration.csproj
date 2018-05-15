@@ -42,8 +42,8 @@
     <Exec Command="ls -l ../../.nuget" />
     <Exec Command="ls -l ../../.nuget/packages" />
     <Exec Command="ls -l ../../.nuget/packages/specflow" />
-    <Exec Command="ls -l ../../.nuget/packages/specflow/SpecFlow.2.1.0" />
-    <Exec Command="ls -l ../../.nuget/packages/specflow/SpecFlow.2.1.0/tools" />
+    <Exec Command="ls -l ../../.nuget/packages/specflow/2.1.0" />
+    <Exec Command="ls -l ../../.nuget/packages/specflow/2.1.0/tools" />
     <Exec Command="ls -l ../stop.features" />
     <Exec Command="ls -l ../stop.features/feature-files" />
     <Exec Command="cp ../stop.features/feature-files/*.* ." />
