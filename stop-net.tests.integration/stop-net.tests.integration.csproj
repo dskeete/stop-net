@@ -33,6 +33,10 @@
     </Compile>
   </ItemGroup> -->
 
+  <Target Name="PrecompileScript" BeforeTargets="BeforeBuild">
+    <Exec Command="nuget.exe" />
+  </Target>
+
   <!-- <Target Name="PrecompileScript" BeforeTargets="BeforeBuild">
     <Exec Command="mono $(NuGetPackageRoot)specflow.netcore\$(SpecFlowNetCoreVersion)\lib\$(TargetFramework)\dotnet-SpecFlow.NetCore.exe" />
   </Target> -->
