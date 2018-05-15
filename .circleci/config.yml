@@ -14,4 +14,4 @@ jobs:
       - run:
           name: build and run tests
           command: |
-            vstest stop-net.tests.integration
+            dotnet vstest stop-net.tests.integration
