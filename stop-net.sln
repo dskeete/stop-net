@@ -11,8 +11,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "stop-net.utilities", "stop-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "stop-net.tests.integration", "stop-net.tests.integration\stop-net.tests.integration.csproj", "{5B57FE58-86C1-4A9A-88B3-AFD50A1B7693}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Folder", "Folder", "{57C40C82-0E16-4F54-A43C-2AB89FE29D80}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,7 +35,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{5B57FE58-86C1-4A9A-88B3-AFD50A1B7693} = {30A5988F-148B-41E1-92D7-15A1230489FF}
-		{57C40C82-0E16-4F54-A43C-2AB89FE29D80} = {30A5988F-148B-41E1-92D7-15A1230489FF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7910DE28-D176-4B5C-ABE3-428E580E072B}
