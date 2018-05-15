@@ -37,9 +37,9 @@
     <Exec Command="mono $(NuGetPackageRoot)specflow.netcore\$(SpecFlowNetCoreVersion)\lib\$(TargetFramework)\dotnet-SpecFlow.NetCore.exe" />
   </Target> -->
 
-  <ItemGroup>
+  <!-- <ItemGroup>
     <DotNetCliToolReference Include="SpecFlow.NetCore" Version="1.2.0" />
-  </ItemGroup>
+  </ItemGroup> -->
 
   <ItemGroup>
     <ProjectReference Include="..\stop-net.utilities\stop-net.utilities.csproj" />
