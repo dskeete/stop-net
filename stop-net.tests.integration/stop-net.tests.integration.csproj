@@ -1,49 +1,33 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
-    <IsPackable>false</IsPackable>
-  </PropertyGroup>
+    <TargetFramework>net461</TargetFramework>
 
-  <PropertyGroup>
-    <SpecFlowNetCoreVersion>1.3.2</SpecFlowNetCoreVersion>
-    <OutputFeature>..\stop.features\feature-files\Output.feature</OutputFeature>
+    <IsPackable>false</IsPackable>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.6.0" />
     <PackageReference Include="MSTest.TestAdapter" Version="1.2.0" />
     <PackageReference Include="MSTest.TestFramework" Version="1.2.0" />
-    <PackageReference Include="Moq" Version="4.7.145" />
-    <PackageReference Include="FluentAssertions" Version="4.19.4" />
-    <PackageReference Include="SpecFlow" Version="2.1.0" />
-    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.4.0" />
+    <PackageReference Include="NUnit" Version="3.10.1" />
+    <PackageReference Include="SpecFlow" Version="2.3.2" />
+    <PackageReference Include="SpecFlow.MsTest" Version="2.3.2" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="$(OutputFeature)" Link="Output.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <SubType>Code</SubType>
-    </None>
-    <Compile Include="$(OutputFeature).cs" Link="Output.feature.cs" Condition="Exists('$(OutputFeature).cs')">
-      <DependentUpon>Output.feature</DependentUpon>
-      <SubType>Code</SubType>
+    <Compile Update="SpecFlowFeature.feature.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>SpecFlowFeature.feature</DependentUpon>
     </Compile>
   </ItemGroup>
 
-  <Target Name="PrecompileScript" BeforeTargets="BeforeBuild">
-    <Copy SourceFiles="$(OutputFeature)" DestinationFolder="." />
-    <Exec Command="echo '*** START EXECUTING PRECOMPILE ***'" />
-    <Exec Command="dotnet SpecFlow.NetCore" />
-    <Exec Command="echo '*** FINSIH EXECUTING PRECOMPILE ***'" />
-  </Target>
-
   <ItemGroup>
-    <DotNetCliToolReference Include="SpecFlow.NetCore" Version="$(SpecFlowNetCoreVersion)" />
+    <None Update="SpecFlowFeature.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>SpecFlowFeature.feature.cs</LastGenOutput>
+    </None>
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\stop-net.utilities\stop-net.utilities.csproj" />
-    <ProjectReference Include="..\stop-net\stop-net.csproj" />
-  </ItemGroup>
 </Project>
