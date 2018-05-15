@@ -7,4 +7,7 @@ jobs:
       - checkout
       - run:
           name: build solution
-          command: dotnet build --configuration Release
+          command: |
+            dotnet SpecFlow.NetCore
+            dotnet build --configuration Release
+                
