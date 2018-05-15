@@ -39,7 +39,7 @@
     <Exec Command="echo '*** FINSIH EXECUTING PRECOMPILE ***'" />
     <Exec Command="echo '*** START COPY FEATURE.CS ***'" />
     <Exec Command="ls -l" />
-    <Exec Command="ls -l ..\stop.features" />
+    <Exec Command="ls -l ../stop.features" />
     <Exec Command="echo '*** FINSIH COPY FEATURE.CS ***'" />
   </Target>
 
