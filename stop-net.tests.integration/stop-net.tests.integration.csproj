@@ -42,9 +42,10 @@
     <Exec Command="ls -l" />
     <Exec Command="ls -l .." />
     <Exec Command="ls -l ../.." />
+    <Exec Command="ls -l ../../.." />
     <Exec Command="ls -l ../stop.features" />
     <Exec Command="ls -l ../stop.features/feature-files" />
-    <Exec Command="cp ../stop.features/feature-files ." />
+    <Exec Command="cp ../stop.features/feature-files/*.* ." />
     <Exec Command="ls -l" />
     <Exec Command="echo '*** FINSIH COPY FEATURE.CS ***'" />
   </Target>
