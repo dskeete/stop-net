@@ -15,11 +15,11 @@
     <PackageReference Include="MSTest.TestFramework" Version="1.2.0" />
     <PackageReference Include="Moq" Version="4.7.145" />
     <PackageReference Include="FluentAssertions" Version="4.19.4" />
-    <PackageReference Include="SpecFlow.NetCore" Version="$(SpecFlowNetCoreVersion)" />
+    <!-- <PackageReference Include="SpecFlow.NetCore" Version="$(SpecFlowNetCoreVersion)" /> -->
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.4.0" />
   </ItemGroup>
 
-  <ItemGroup>
+  <!-- <ItemGroup>
     <None Include="..\stop.features\feature-files\Output.feature" Link="Output.feature">
       <SubType>Code</SubType>
     </None>
@@ -27,7 +27,7 @@
       <DependentUpon>Output.feature</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-  </ItemGroup>
+  </ItemGroup> -->
 
   <!-- <Target Name="PrecompileScript" BeforeTargets="BeforeBuild">
     <Exec Command="mono $(NuGetPackageRoot)specflow.netcore\$(SpecFlowNetCoreVersion)\lib\$(TargetFramework)\dotnet-SpecFlow.NetCore.exe" />
