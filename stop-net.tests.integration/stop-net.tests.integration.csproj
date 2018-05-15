@@ -25,12 +25,12 @@
 
   <ItemGroup>
     <None Include="..\stop.features\feature-files\Output.feature" Link="Output.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
       <SubType>Code</SubType>
     </None>
     <Compile Include="..\stop.features\feature-files\Output.feature.cs" Link="Output.feature.cs">
       <DependentUpon>Output.feature</DependentUpon>
       <SubType>Code</SubType>
-      <Generator>SpecFlowSingleFileGenerator</Generator>
     </Compile>
   </ItemGroup>
 
