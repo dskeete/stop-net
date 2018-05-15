@@ -8,4 +8,4 @@ jobs:
       - run:
           name: build solution
           command: |
-            msbuild stop-net.sln
+            msbuild /t:restore stop-net.sln
