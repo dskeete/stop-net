@@ -37,7 +37,7 @@
 
   <Target Name="PrecompileScript" BeforeTargets="BeforeBuild">
     <Exec Command="echo '*** START COPY FEATURES ***'" />
-    <Exec Command="cp ../stop.features/feature-files/Output.feature ." />
+    <Exec Command="cp $(OutputFeature) ." />
     <Exec Command="echo '*** FINSIH COPY FEATURES ***'" />
     <Exec Command="echo '*** START EXECUTING PRECOMPILE ***'" />
     <Exec Command="dotnet SpecFlow.NetCore" />
