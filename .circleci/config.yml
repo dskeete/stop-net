@@ -10,5 +10,12 @@ jobs:
       - run:
           name: build solution
           command: |
-            dotnet build --configuration Release
-            dotnet test stop-net.tests.integration
+            dotnet build  --configuration Release
+      - run:
+          name: build tests
+          command: |
+            dotnet build stop-net.tests.integration
+      - run:
+          name: run tests
+          command: |
+            dotnet test stop-net.tests.integration --no-build -t -v diag
