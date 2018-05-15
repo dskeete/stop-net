@@ -12,10 +12,6 @@ jobs:
           command: |
             dotnet build stop-net --configuration Release
       - run:
-          name: build tests
+          name: build and run tests
           command: |
-            dotnet build stop-net.tests.integration --configuration Release
-      - run:
-          name: run tests
-          command: |
-            dotnet test stop-net.tests.integration --no-build --no-restore -v n
+            vstest stop-net.tests.integration
