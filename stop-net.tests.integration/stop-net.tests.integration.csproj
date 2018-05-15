@@ -36,7 +36,7 @@
   </ItemGroup>
 
   <Target Name="PrecompileScript" BeforeTargets="BeforeBuild">
-    <Exec Command="cp --verbose -rf $(OutputFeature) ." Condition="!Exists('$(OutputFeature).cs')" />
+	<Exec Command="copy $(OutputFeature) ." />
     <Exec Command="echo '*** START EXECUTING PRECOMPILE ***'" />
     <Exec Command="dotnet SpecFlow.NetCore" />
     <Exec Command="echo '*** FINSIH EXECUTING PRECOMPILE ***'" />
