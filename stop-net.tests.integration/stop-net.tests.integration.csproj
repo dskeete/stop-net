@@ -28,7 +28,7 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <SubType>Code</SubType>
     </None>
-    <Compile Include="..\stop.features\feature-files\Output.feature.cs" Link="Output.feature.cs" Condition="Exists('../../.nuget/packages/specflow/2.1.0/tools/TechTalk.SpecFlow.tasks')">
+    <Compile Include="..\stop.features\feature-files\Output.feature.cs" Link="Output.feature.cs" Condition="Exists('../stop.features/feature-files/Output.feature.cs')">
       <DependentUpon>Output.feature</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
