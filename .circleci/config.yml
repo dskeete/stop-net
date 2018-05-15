@@ -18,4 +18,4 @@ jobs:
       - run:
           name: run tests
           command: |
-            dotnet test stop-net.tests.integration --no-build -t -v diag
+            dotnet test stop-net.tests.integration --no-build -t -v n
