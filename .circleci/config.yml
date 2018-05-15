@@ -2,10 +2,10 @@ version: 2
 jobs:
   build:
     docker:
-      - image: mono:latest
+      - image: microsoft/dotnet:latest
     steps:
       - checkout
       - run:
           name: build solution
           command: |
-            msbuild /t:restore stop-net.sln
+            dotnet build --configuration Release
