@@ -30,10 +30,11 @@
     <Compile Include="..\stop.features\feature-files\Output.feature.cs" Link="Output.feature.cs">
       <DependentUpon>Output.feature</DependentUpon>
       <SubType>Code</SubType>
+      <Generator>SpecFlowSingleFileGenerator</Generator>
     </Compile>
   </ItemGroup>
 
-  <Target Name="PrecompileScript" BeforeTargets="Build">
+  <Target Name="PrecompileScript" BeforeTargets="BeforeBuild">
     <Exec Command="echo '*** START EXECUTING PRECOMPILE ***'" />
     <Exec Command="dotnet SpecFlow.NetCore" />
     <Exec Command="echo '*** FINSIH EXECUTING PRECOMPILE ***'" />
