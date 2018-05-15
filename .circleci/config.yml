@@ -10,11 +10,11 @@ jobs:
       - run:
           name: build solution
           command: |
-            dotnet build  --configuration Release
+            dotnet build stop-net --configuration Release
       - run:
           name: build tests
           command: |
-            dotnet build stop-net.tests.integration
+            dotnet build stop-net.tests.integration --configuration Release
       - run:
           name: run tests
           command: |
