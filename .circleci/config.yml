@@ -11,3 +11,4 @@ jobs:
           name: build solution
           command: |
             dotnet build --configuration Release
+            dotnet test
