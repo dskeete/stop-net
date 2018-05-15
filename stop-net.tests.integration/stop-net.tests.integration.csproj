@@ -33,7 +33,7 @@
     </Compile>
   </ItemGroup>
 
-  <Target Name="PrecompileScript" BeforeTargets="BeforeBuild">
+  <Target Name="PrecompileScript" BeforeTargets="Build">
     <Exec Command="echo '*** START EXECUTING PRECOMPILE ***'" />
     <Exec Command="dotnet SpecFlow.NetCore" />
     <Exec Command="echo '*** FINSIH EXECUTING PRECOMPILE ***'" />
