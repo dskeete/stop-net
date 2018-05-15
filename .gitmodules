@@ -1,0 +1,4 @@
+[submodule "stop.features"]
+	path = stop.features
+	url = https://github.com/dskeete/stop.features.git
+	branch = master

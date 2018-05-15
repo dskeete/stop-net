@@ -1,4 +1,5 @@
-﻿using System;
+﻿using stop_net.utilities;
+using System;
 
 namespace stop_net
 {
@@ -6,7 +7,7 @@ namespace stop_net
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Stop!");
+            Console.WriteLine(OutputUtility.Instance.WriteLine());
         }
     }
 }

@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.6.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="1.2.0" />
+    <PackageReference Include="MSTest.TestFramework" Version="1.2.0" />
+    <PackageReference Include="Moq" Version="4.7.145" />
+    <PackageReference Include="FluentAssertions" Version="4.19.4" />
+    <PackageReference Include="SpecFlow" Version="2.2.1" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\stop.features\feature-files\Output.feature" Link="Output.feature">
+      <SubType>Code</SubType>
+    </None>
+    <Compile Include="..\stop.features\feature-files\Output.feature.cs" Link="Output.feature.cs">
+      <DependentUpon>Output.feature</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <Target Name="PrecompileScript" BeforeTargets="BeforeBuild">
+    <Exec Command="dotnet SpecFlow.NetCore" />
+  </Target>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="SpecFlow.NetCore" Version="1.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\stop-net.utilities\stop-net.utilities.csproj" />
+    <ProjectReference Include="..\stop-net\stop-net.csproj" />
+  </ItemGroup>
+
+</Project>
