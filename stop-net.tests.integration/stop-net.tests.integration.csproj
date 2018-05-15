@@ -29,9 +29,9 @@
     </Compile>
   </ItemGroup>
 
-  <Target Name="PrecompileScript" BeforeTargets="BeforeBuild">
+  <!-- <Target Name="PrecompileScript" BeforeTargets="BeforeBuild">
     <Exec Command="mono $(NuGetPackageRoot)specflow.netcore\$(SpecFlowNetCoreVersion)\lib\$(TargetFramework)\dotnet-SpecFlow.NetCore.exe" />
-  </Target>
+  </Target> -->
 
   <ItemGroup>
     <DotNetCliToolReference Include="SpecFlow.NetCore" Version="1.2.0" />
