@@ -14,12 +14,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.App" Version="2.0.7" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.6.0" />
     <PackageReference Include="MSTest.TestAdapter" Version="1.2.0" />
     <PackageReference Include="MSTest.TestFramework" Version="1.2.0" />
     <PackageReference Include="Moq" Version="4.7.145" />
     <PackageReference Include="FluentAssertions" Version="4.19.4" />
-    <!-- <PackageReference Include="SpecFlow.NetCore" Version="$(SpecFlowNetCoreVersion)" /> -->
+    <PackageReference Include="SpecFlow.NetCore" Version="$(SpecFlowNetCoreVersion)" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.4.0" />
   </ItemGroup>
 
@@ -32,10 +33,6 @@
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup> -->
-
-  <Target Name="PrecompileScript" BeforeTargets="BeforeBuild">
-    <Exec Command="nuget.exe" />
-  </Target>
 
   <!-- <Target Name="PrecompileScript" BeforeTargets="BeforeBuild">
     <Exec Command="mono $(NuGetPackageRoot)specflow.netcore\$(SpecFlowNetCoreVersion)\lib\$(TargetFramework)\dotnet-SpecFlow.NetCore.exe" />
