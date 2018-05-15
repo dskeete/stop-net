@@ -54,6 +54,6 @@
     <ProjectReference Include="..\stop-net.utilities\stop-net.utilities.csproj" />
     <ProjectReference Include="..\stop-net\stop-net.csproj" />
   </ItemGroup>
-  <Import Project="\$(NuGetPackageRoot)SpecFlow.2.1.0\tools\TechTalk.SpecFlow.tasks"  Condition="Exists('\$(NuGetPackageRoot)SpecFlow.2.1.0\tools\TechTalk.SpecFlow.tasks')" />
-  <Import Project="\$(NuGetPackageRoot)SpecFlow.2.1.0\tools\TechTalk.SpecFlow.targets" Condition="Exists('\$(NuGetPackageRoot)pecFlow.2.1.0\tools\TechTalk.SpecFlow.targets')" />
+  <Import Project="../../.nuget/packages/SpecFlow.2.1.0/tools/TechTalk.SpecFlow.tasks"  Condition="Exists('../../.nuget/packages/SpecFlow.2.1.0/tools/TechTalk.SpecFlow.tasks')" />
+  <Import Project="../../.nuget/packages/SpecFlow.2.1.0/tools/TechTalk.SpecFlow.targets" Condition="Exists('../../.nuget/packages/SpecFlow.2.1.0/tools/TechTalk.SpecFlow.targets')" />
 </Project>
