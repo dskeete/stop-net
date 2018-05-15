@@ -41,6 +41,7 @@
     <Exec Command="ls -l" />
     <Exec Command="ls -l .." />
     <Exec Command="ls -l ../stop.features" />
+    <Exec Command="ls -l ../.." />
     <Exec Command="echo '*** FINSIH COPY FEATURE.CS ***'" />
   </Target>
 
