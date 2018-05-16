@@ -2,16 +2,14 @@ version: 2
 jobs:
   build:
     docker:
-      - image: microsoft/dotnet:latest
+      - image: mono:latest
     steps:
       - checkout
-      - run: git submodule sync
-      - run: git submodule update --init
       - run:
           name: build solution
           command: |
-            dotnet build stop-net --configuration Release
+            xbuild stopnet.integration.tests
       - run:
-          name: build and run tests
+          name: run tests
           command: |
-            dotnet test stop-net.tests.integration -v n
+            mstest
